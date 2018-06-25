@@ -110,10 +110,10 @@
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>tomcat-maven-plugin</artifactId>
 				<configuration>
-					<url>https://127.0.0.1/manager/text</url>
+					<url>http://lee33397.cafe24.com/manager/text</url>
 					<path>/cafe24API</path>
 					<username>admin</username>
-					<password>manager</password>
+					<password>admin</password>
 				</configuration>
 			</plugin>
 		</plugins>
