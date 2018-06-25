@@ -111,7 +111,7 @@
 				<artifactId>tomcat-maven-plugin</artifactId>
 				<configuration>
 					<url>https://devbit005.cafe24.com/manager/text</url>
-					<path>/cafe24API</path>
+					<path>dudtj0904/cafe24API</path>
 					<username>admin</username>
 					<password>manager</password>
 				</configuration>
