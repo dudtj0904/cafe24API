@@ -113,7 +113,7 @@
 					<url>http://lee33397.cafe24.com/manager/text</url>
 					<path>/cafe24API</path>
 					<username>admin</username>
-					<password>admin</password>
+					<password>manager</password>
 				</configuration>
 			</plugin>
 			<plugin>
