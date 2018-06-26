@@ -22,9 +22,9 @@ $(function() {
 			console.log(response);
 			return;
 		},
-		error: function(err, a) {
+		error: function(err,error_description) {
 			console.log(err.status);
-			console.log(a);
+			console.log(error_description);
 			return;
 		}
 	});
