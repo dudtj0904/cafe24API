@@ -5,10 +5,28 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
-<script type="text/javascript" src="./WEB-INF/jquery/jquery-1.9.0.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath }/jquery/jquery-1.9.0.js"></script>
 <script>
 $(function() {
-	console.log('okok')
+	mallid = 'devbit005';
+	clientid = '9A1VRuE0IRCkXF5SQjNJSC';
+	redirect_uri = 'https://devbit005.cafe24.com/cafe24API/';
+	scope = 'mall.read_product,mall.write_product';
+	$.ajax({
+		url: 'https://'+mallid+
+			'.cafe24api.com/api/v2/oauth/authorize?response_type=code&client_id='+clientid+
+			'&state=123&redirect_uri='+redirect_uri+'&scope='+scope,
+		type: 'get',
+		dataType: 'json',
+		success: function(response) {
+			console.log(response);
+			return;
+		},
+		error: function(err) {
+			console.log(err);
+			return;
+		}
+	});
 });
 </script>
 </head>

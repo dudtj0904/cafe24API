@@ -14,9 +14,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	public void configure(WebSecurity web) throws Exception {
 		// 모든 페이지 비인증 설정
-		web.ignoring().antMatchers("/**");
+		//web.ignoring().antMatchers("/**");
 		
-		//web.ignoring().antMatchers("/css/**", "/script/**", "/");
+		web.ignoring().antMatchers("/css/**", "/jquery/**", "/");
 		
 	}
 
