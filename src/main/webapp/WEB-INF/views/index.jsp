@@ -8,7 +8,7 @@
 <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
 <script>
 $(function() {
-	mallid = 'devbit005';
+	mallid = 'kimdudtj';
 	clientid = '9A1VRuE0IRCkXF5SQjNJSC';
 	redirect_uri = btoa('https://devbit005.cafe24.com/cafe24API/index2');
 	scope = 'mall.read_product,mall.write_product';
