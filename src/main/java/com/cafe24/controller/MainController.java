@@ -22,7 +22,7 @@ public class MainController {
 	public String main2(Model model) {
 		model.addAttribute("hello", "hello hello2");
 		
-		return "index";	// /WEB-INF/views/index.jsp
+		return "index2";	// /WEB-INF/views/index.jsp
 	}
 
 }
