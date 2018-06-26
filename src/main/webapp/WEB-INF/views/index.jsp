@@ -5,10 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
+<script type="text/javascript" src="./jquery/jquery-1.9.0.js"></script>
 <script>
 $(function() {
 	console.log('okok')
-})();
+});
 </script>
 </head>
 <body>
