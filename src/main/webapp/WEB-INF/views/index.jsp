@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
-<script type="text/javascript" src="${pageContext.request.contextPath }/jquery/jquery-1.9.0.js"></script>
+<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
 <script>
 $(function() {
 	mallid = 'devbit005';
@@ -24,8 +24,9 @@ $(function() {
 			console.log(response);
 			return;
 		},
-		error: function(err) {
+		error: function(err, a) {
 			console.log(err);
+			console.log(a);
 			return;
 		}
 	});
