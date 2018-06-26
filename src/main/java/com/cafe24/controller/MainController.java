@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller		// : view(화면) return
 public class MainController {
 
-	@RequestMapping(value= {"/", "/index"})
+	@RequestMapping(value= {"", "/", "/index"})
 	public String main(Model model) {
 		model.addAttribute("hello", "hello hello");
 		
