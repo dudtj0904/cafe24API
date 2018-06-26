@@ -23,7 +23,7 @@ $(function() {
 			return;
 		},
 		error: function(err, a) {
-			console.log(err);
+			console.log(err.status);
 			console.log(a);
 			return;
 		}
