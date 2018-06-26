@@ -14,12 +14,10 @@ $(function() {
 	scope = 'mall.read_product,mall.write_product';
 	$.ajax({
 		url: 'https://'+mallid+
-			'.cafe24api.com/api/v2/oauth/authorize',
-		type: 'post',
+			'.cafe24api.com/api/v2/oauth/authorize?response_type=code&client_id='+clientid+
+			'&state=123&redirect_uri='+redirect_uri+'&scope='+scope,
+		type: 'GET',
 		dataType: 'json',
-		data: 'response_type='+'code'+
-				'&client_id='+clientid+
-				'&state=123&redirect_uri='+redirect_uri+'&scope='+scope,
 		success: function(response) {
 			console.log(response);
 			return;
