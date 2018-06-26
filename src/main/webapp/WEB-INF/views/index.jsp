@@ -10,7 +10,7 @@
 $(function() {
 	mallid = 'devbit005';
 	clientid = '9A1VRuE0IRCkXF5SQjNJSC';
-	redirect_uri = 'https://devbit005.cafe24.com/cafe24API/';
+	redirect_uri = 'https://devbit005.cafe24.com/cafe24API/index2';
 	scope = 'mall.read_product,mall.write_product';
 	$.ajax({
 		url: 'https://'+mallid+
