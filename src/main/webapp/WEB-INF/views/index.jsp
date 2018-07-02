@@ -9,7 +9,7 @@
 <script>
 $(function() {
 	mallid = 'kimdudtj';
-	clientid = '9A1VRuE0IRCkXF5SQjNJSC';
+	clientid = '9A1VRuE0IRCkXF5SQjNJSC'; // app key
 	redirect_uri = btoa('https://devbit005.cafe24.com/cafe24API/index2');
 	scope = 'mall.read_product,mall.write_product';
 	$.ajax({
