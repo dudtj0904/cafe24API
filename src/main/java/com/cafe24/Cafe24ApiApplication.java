@@ -15,6 +15,8 @@ public class Cafe24ApiApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
 		SpringApplication.run(Cafe24ApiApplication.class, args);
+		
+		/*EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpa_ex");*/
 	}
 	
 	@Override

@@ -5,13 +5,22 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
-<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
-<script>
-
-</script>
+<style>
+#container-cart {
+width: 400px;
+height: 500px;
+margin-left: 30%;
+border: 2px solid black;
+}
+</style>
 </head>
 <body>
-	<h1>Hello World !!!</h1>
-	<h1>${hello }</h1>
+<div id="container-cart">
+	<div id="cart-list">
+	
+	</div>
+	<div id="cart-info">
+	</div>
+</div>
 </body>
 </html>

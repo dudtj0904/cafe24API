@@ -1,28 +1,68 @@
 package com.cafe24.controller;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import com.cafe24.domain.Panel;
+import com.cafe24.service.PanelService;
+import com.cafe24.service.ScriptService;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 // @RestController : data return
 // -> 객체를 반환하면 객체 데이터는 JSON/XML 형식의 HTTP 응답 작성
 // -> @Controller + @ResponseBody
 @Controller		// : view(화면) return
+@RequestMapping(value="/{mid}")
 public class MainController {
-
-	@RequestMapping(value= {"", "/", "/index"})
-	public String main(Model model) {
-		model.addAttribute("hello", "hello hello");
+	
+	@Autowired
+	PanelService pservice;
+	@Autowired
+	ScriptService sservice;
+	
+	@RequestMapping(value= {"", "/"})
+	public String main(Model model, @PathVariable("mid") String mid) {
 		
+		List<Panel> list = pservice.getPanelList();
+		
+		model.addAttribute("mid", mid);
+		model.addAttribute("center", "main");
+		model.addAttribute("list", list);
 		return "index";	// /WEB-INF/views/index.jsp
 	}
 	
-	@RequestMapping(value="/index2")
-	public String main2(Model model) {
-		model.addAttribute("hello", "hello hello2");
-		
-		return "index2";	// /WEB-INF/views/index.jsp
+	@RequestMapping(value="/save")
+	public String save(Model model, @PathVariable("mid") String mid) {
+		/*
+		 * temp_panel table -> panel table 데이터 이동
+		 */
+		return "redirect:/"+mid;	// /WEB-INF/views/index.jsp
 	}
+	
+	@RequestMapping(value="/{panelId}/update")
+	public String update(@PathVariable("panelId") Long panelId) {
+		
+		return "update";
+		
+	}
+	
+	@RequestMapping(value="/example")
+	public String exam(@PathVariable("mid") String mid) {
+		
+		String URL = "";
+		
+		
+		return "example/cart";
+	}
+	
+
+	
+
 
 }
